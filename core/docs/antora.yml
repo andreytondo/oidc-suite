@@ -1,0 +1,5 @@
+name: quarkus-core
+title: OIDC Core
+version: dev
+nav:
+  - modules/ROOT/nav.adoc

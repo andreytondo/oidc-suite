@@ -1,0 +1,466 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] oidc-suite                                                         [pom]
+[INFO] Quarkus OIDC Suite - BOM                                           [pom]
+[INFO] Quarkus OIDC Core - Parent                                         [pom]
+[INFO] Quarkus OIDC Core - Runtime                                        [jar]
+[INFO] Quarkus OIDC Core - Deployment                                     [jar]
+[INFO] Quarkus OIDC Core - Documentation                                  [jar]
+[INFO] Quarkus OIDC Core - Integration Tests                              [jar]
+[INFO] Quarkus Google Identity - Parent                                   [pom]
+[INFO] Quarkus Google Identity - Runtime                                  [jar]
+[INFO] Quarkus Google Identity - Deployment                               [jar]
+[INFO] Quarkus Google Identity - Documentation                            [jar]
+[INFO] Quarkus Google Identity - Integration Tests                        [jar]
+[INFO] Quarkus GovBR Identity - Parent                                    [pom]
+[INFO] Quarkus GovBR Identity - Runtime                                   [jar]
+[INFO] Quarkus GovBR Identity - Deployment                                [jar]
+[INFO] Quarkus GovBR Identity - Documentation                             [jar]
+[INFO] Quarkus GovBR Identity - Integration Tests                         [jar]
+[INFO] oidc-api                                                           [jar]
+[INFO] oidc-mock                                                          [jar]
+[INFO] 
+[INFO] -----------------< com.github.andreytondo:oidc-suite >------------------
+[INFO] Building oidc-suite 999-SNAPSHOT                                  [1/19]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.4.1:clean (default-clean) @ oidc-suite ---
+[INFO] Deleting /home/andrey-tondo/repo/oidc-suite/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-java-version) @ oidc-suite ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.BannedRepositories passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-maven-version) @ oidc-suite ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:3.2.1:create (get-scm-revision) @ oidc-suite ---
+[INFO] Executing: /bin/sh -c cd '/home/andrey-tondo/repo/oidc-suite' && 'git' 'log' '-1' '--no-merges' '--format=format:%H %aI %aE %aN'
+[INFO] Working directory: /home/andrey-tondo/repo/oidc-suite
+[INFO] Storing buildNumber: 94b1833718f1568c0fc023f510b046502413ddbe at timestamp: 1764290859617
+[INFO] Executing: /bin/sh -c cd '/home/andrey-tondo/repo/oidc-suite' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/andrey-tondo/repo/oidc-suite
+[INFO] Storing scmBranch: main
+[INFO] 
+[INFO] --- formatter-maven-plugin:2.26.0:format (format-sources) @ oidc-suite ---
+[INFO] 
+[INFO] --- impsort-maven-plugin:1.12.0:sort (sort-imports) @ oidc-suite ---
+[INFO] Processed 0 files in 00:00.001 (Already Sorted: 0, Needed Sorting: 0)
+[INFO] 
+[INFO] --- maven-source-plugin:3.3.1:jar-no-fork (attach-sources) @ oidc-suite ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ oidc-suite ---
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/pom.xml to /home/andrey-tondo/.m2/repository/com/github/andreytondo/oidc-suite/999-SNAPSHOT/oidc-suite-999-SNAPSHOT.pom
+[INFO] 
+[INFO] ---------------< com.github.andreytondo:oidc-suite-bom >----------------
+[INFO] Building Quarkus OIDC Suite - BOM 999-SNAPSHOT                    [2/19]
+[INFO]   from bom/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.4.1:clean (default-clean) @ oidc-suite-bom ---
+[INFO] Deleting /home/andrey-tondo/repo/oidc-suite/bom/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-java-version) @ oidc-suite-bom ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.BannedRepositories passed
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-maven-version) @ oidc-suite-bom ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:3.2.1:create (get-scm-revision) @ oidc-suite-bom ---
+[INFO] 
+[INFO] --- formatter-maven-plugin:2.26.0:format (format-sources) @ oidc-suite-bom ---
+[INFO] 
+[INFO] --- impsort-maven-plugin:1.12.0:sort (sort-imports) @ oidc-suite-bom ---
+[INFO] Processed 0 files in 00:00.000 (Already Sorted: 0, Needed Sorting: 0)
+[INFO] 
+[INFO] --- maven-source-plugin:3.3.1:jar-no-fork (attach-sources) @ oidc-suite-bom ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ oidc-suite-bom ---
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/bom/pom.xml to /home/andrey-tondo/.m2/repository/com/github/andreytondo/oidc-suite-bom/999-SNAPSHOT/oidc-suite-bom-999-SNAPSHOT.pom
+[INFO] 
+[INFO] --------------< io.quarkiverse.core:quarkus-core-parent >---------------
+[INFO] Building Quarkus OIDC Core - Parent 999-SNAPSHOT                  [3/19]
+[INFO]   from core/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.4.1:clean (default-clean) @ quarkus-core-parent ---
+[INFO] Deleting /home/andrey-tondo/repo/oidc-suite/core/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-java-version) @ quarkus-core-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.BannedRepositories passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-maven-version) @ quarkus-core-parent ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:3.2.1:create (get-scm-revision) @ quarkus-core-parent ---
+[INFO] 
+[INFO] --- formatter-maven-plugin:2.26.0:format (format-sources) @ quarkus-core-parent ---
+[INFO] 
+[INFO] --- impsort-maven-plugin:1.12.0:sort (sort-imports) @ quarkus-core-parent ---
+[INFO] Processed 0 files in 00:00.000 (Already Sorted: 0, Needed Sorting: 0)
+[INFO] 
+[INFO] --- maven-source-plugin:3.3.1:jar-no-fork (attach-sources) @ quarkus-core-parent ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ quarkus-core-parent ---
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/pom.xml to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core-parent/999-SNAPSHOT/quarkus-core-parent-999-SNAPSHOT.pom
+[INFO] 
+[INFO] ------------------< io.quarkiverse.core:quarkus-core >------------------
+[INFO] Building Quarkus OIDC Core - Runtime 999-SNAPSHOT                 [4/19]
+[INFO]   from core/runtime/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.4.1:clean (default-clean) @ quarkus-core ---
+[INFO] Deleting /home/andrey-tondo/repo/oidc-suite/core/runtime/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-java-version) @ quarkus-core ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.BannedRepositories passed
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-maven-version) @ quarkus-core ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:3.2.1:create (get-scm-revision) @ quarkus-core ---
+[INFO] 
+[INFO] --- formatter-maven-plugin:2.26.0:format (format-sources) @ quarkus-core ---
+[INFO] 
+[INFO] --- impsort-maven-plugin:1.12.0:sort (sort-imports) @ quarkus-core ---
+[INFO] Processed 0 files in 00:00.009 (Already Sorted: 0, Needed Sorting: 0)
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ quarkus-core ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.14.1:compile (default-compile) @ quarkus-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- quarkus-extension-maven-plugin:3.30.1:extension-descriptor (default) @ quarkus-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ quarkus-core ---
+[INFO] skip non existing resourceDirectory /home/andrey-tondo/repo/oidc-suite/core/runtime/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.14.1:testCompile (default-testCompile) @ quarkus-core ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.5.3:test (default-test) @ quarkus-core ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.4.2:jar (default-jar) @ quarkus-core ---
+[INFO] Building jar: /home/andrey-tondo/repo/oidc-suite/core/runtime/target/quarkus-core-999-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-source-plugin:3.3.1:jar-no-fork (attach-sources) @ quarkus-core ---
+[INFO] Building jar: /home/andrey-tondo/repo/oidc-suite/core/runtime/target/quarkus-core-999-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ quarkus-core ---
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/runtime/target/quarkus-core-999-SNAPSHOT.jar to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core/999-SNAPSHOT/quarkus-core-999-SNAPSHOT.jar
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/runtime/pom.xml to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core/999-SNAPSHOT/quarkus-core-999-SNAPSHOT.pom
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/runtime/target/quarkus-core-999-SNAPSHOT-sources.jar to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core/999-SNAPSHOT/quarkus-core-999-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] ------------< io.quarkiverse.core:quarkus-core-deployment >-------------
+[INFO] Building Quarkus OIDC Core - Deployment 999-SNAPSHOT              [5/19]
+[INFO]   from core/deployment/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.4.1:clean (default-clean) @ quarkus-core-deployment ---
+[INFO] Deleting /home/andrey-tondo/repo/oidc-suite/core/deployment/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-java-version) @ quarkus-core-deployment ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.BannedRepositories passed
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-maven-version) @ quarkus-core-deployment ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:3.2.1:create (get-scm-revision) @ quarkus-core-deployment ---
+[INFO] 
+[INFO] --- formatter-maven-plugin:2.26.0:format (format-sources) @ quarkus-core-deployment ---
+[INFO] Processed 3 files in 2s439ms (Formatted: 0, Skipped: 0, Unchanged: 3, Failed: 0, Readonly: 0)
+[INFO] 
+[INFO] --- impsort-maven-plugin:1.12.0:sort (sort-imports) @ quarkus-core-deployment ---
+[INFO] Processed 3 files in 00:00.323 (Already Sorted: 3, Needed Sorting: 0)
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ quarkus-core-deployment ---
+[INFO] skip non existing resourceDirectory /home/andrey-tondo/repo/oidc-suite/core/deployment/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.14.1:compile (default-compile) @ quarkus-core-deployment ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug deprecation parameters release 21] to target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ quarkus-core-deployment ---
+[INFO] skip non existing resourceDirectory /home/andrey-tondo/repo/oidc-suite/core/deployment/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.14.1:testCompile (default-testCompile) @ quarkus-core-deployment ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug deprecation parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.5.3:test (default-test) @ quarkus-core-deployment ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.github.andreytondo.oidc.core.test.CoreTest
+2025-11-27 21:47:56,519 INFO  [io.quarkus] (main) quarkus-core-deployment 999-SNAPSHOT on JVM (powered by Quarkus 3.30.1) started in 0.388s. 
+2025-11-27 21:47:56,521 INFO  [io.quarkus] (main) Profile test activated. 
+2025-11-27 21:47:56,521 INFO  [io.quarkus] (main) Installed features: [cdi, core]
+2025-11-27 21:47:56,610 INFO  [io.quarkus] (main) quarkus-core-deployment stopped in 0.012s
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.528 s -- in com.github.andreytondo.oidc.core.test.CoreTest
+[INFO] Running com.github.andreytondo.oidc.core.test.CoreDevModeTest
+Tests paused
+__  ____  __  _____   ___  __ ____  ______ 
+ --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
+ -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
+--\___\_\____/_/ |_/_/|_/_/|_|\____/___/   
+2025-11-27 21:48:00,447 INFO  [io.quarkus] (Quarkus Main Thread) quarkus-core-deployment 999-SNAPSHOT on JVM (powered by Quarkus 3.30.1) started in 2.440s. 
+2025-11-27 21:48:00,448 INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2025-11-27 21:48:00,448 INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, core]
+2025-11-27 21:48:00,458 INFO  [io.quarkus] (Quarkus Main Thread) quarkus-core-deployment stopped in 0.004s
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.815 s -- in com.github.andreytondo.oidc.core.test.CoreDevModeTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.4.2:jar (default-jar) @ quarkus-core-deployment ---
+[INFO] Building jar: /home/andrey-tondo/repo/oidc-suite/core/deployment/target/quarkus-core-deployment-999-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-source-plugin:3.3.1:jar-no-fork (attach-sources) @ quarkus-core-deployment ---
+[INFO] Building jar: /home/andrey-tondo/repo/oidc-suite/core/deployment/target/quarkus-core-deployment-999-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ quarkus-core-deployment ---
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/deployment/target/quarkus-core-deployment-999-SNAPSHOT.jar to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core-deployment/999-SNAPSHOT/quarkus-core-deployment-999-SNAPSHOT.jar
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/deployment/pom.xml to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core-deployment/999-SNAPSHOT/quarkus-core-deployment-999-SNAPSHOT.pom
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/deployment/target/quarkus-core-deployment-999-SNAPSHOT-sources.jar to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core-deployment/999-SNAPSHOT/quarkus-core-deployment-999-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] ---------------< io.quarkiverse.core:quarkus-core-docs >----------------
+[INFO] Building Quarkus OIDC Core - Documentation 999-SNAPSHOT           [6/19]
+[INFO]   from core/docs/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.4.1:clean (default-clean) @ quarkus-core-docs ---
+[INFO] Deleting /home/andrey-tondo/repo/oidc-suite/core/docs/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-java-version) @ quarkus-core-docs ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.BannedRepositories passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-maven-version) @ quarkus-core-docs ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:3.2.1:create (get-scm-revision) @ quarkus-core-docs ---
+[INFO] 
+[INFO] --- yaml-properties-maven-plugin:1.1.3:read-project-properties (default) @ quarkus-core-docs ---
+[INFO] 
+[INFO] --- formatter-maven-plugin:2.26.0:format (format-sources) @ quarkus-core-docs ---
+[INFO] 
+[INFO] --- impsort-maven-plugin:1.12.0:sort (sort-imports) @ quarkus-core-docs ---
+[INFO] Processed 0 files in 00:00.006 (Already Sorted: 0, Needed Sorting: 0)
+[INFO] 
+[INFO] --- quarkus-config-doc-maven-plugin:3.30.1:generate-config-doc (default-generate-config-doc) @ quarkus-core-docs ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:copy-resources (copy-resources) @ quarkus-core-docs ---
+[INFO] Copying 1 resource from templates/includes to modules/ROOT/pages/includes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ quarkus-core-docs ---
+[INFO] skip non existing resourceDirectory /home/andrey-tondo/repo/oidc-suite/core/docs/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.14.1:compile (default-compile) @ quarkus-core-docs ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ quarkus-core-docs ---
+[INFO] skip non existing resourceDirectory /home/andrey-tondo/repo/oidc-suite/core/docs/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.14.1:testCompile (default-testCompile) @ quarkus-core-docs ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.5.3:test (default-test) @ quarkus-core-docs ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:copy-resources (copy-images) @ quarkus-core-docs ---
+[INFO] Copying 1 resource from modules/ROOT/assets/images to target/generated-docs/_images
+[INFO] 
+[INFO] --- asciidoctor-maven-plugin:3.2.0:process-asciidoc (output-html) @ quarkus-core-docs ---
+[INFO] Converted /home/andrey-tondo/repo/oidc-suite/core/docs/modules/ROOT/pages/includes/attributes.adoc
+[INFO] asciidoctor: INFO: index.adoc: line 27: optional include dropped because include file not found: /home/andrey-tondo/repo/oidc-suite/core/docs/modules/ROOT/pages/includes/quarkus-core.adoc
+[INFO] Converted /home/andrey-tondo/repo/oidc-suite/core/docs/modules/ROOT/pages/index.adoc
+[INFO] 
+[INFO] --- maven-jar-plugin:3.4.2:jar (default-jar) @ quarkus-core-docs ---
+[INFO] Building jar: /home/andrey-tondo/repo/oidc-suite/core/docs/target/quarkus-core-docs-999-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-source-plugin:3.3.1:jar-no-fork (attach-sources) @ quarkus-core-docs ---
+[INFO] Building jar: /home/andrey-tondo/repo/oidc-suite/core/docs/target/quarkus-core-docs-999-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- quarkus-maven-plugin:3.30.1:build (default) @ quarkus-core-docs ---
+[INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 2474ms
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ quarkus-core-docs ---
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/docs/target/quarkus-core-docs-999-SNAPSHOT.jar to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core-docs/999-SNAPSHOT/quarkus-core-docs-999-SNAPSHOT.jar
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/docs/pom.xml to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core-docs/999-SNAPSHOT/quarkus-core-docs-999-SNAPSHOT.pom
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/docs/target/quarkus-core-docs-999-SNAPSHOT-sources.jar to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core-docs/999-SNAPSHOT/quarkus-core-docs-999-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] ---------< io.quarkiverse.core:quarkus-core-integration-tests >---------
+[INFO] Building Quarkus OIDC Core - Integration Tests 999-SNAPSHOT       [7/19]
+[INFO]   from core/integration-tests/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.4.1:clean (default-clean) @ quarkus-core-integration-tests ---
+[INFO] Deleting /home/andrey-tondo/repo/oidc-suite/core/integration-tests/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-java-version) @ quarkus-core-integration-tests ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.BannedRepositories passed
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-maven-version) @ quarkus-core-integration-tests ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:3.2.1:create (get-scm-revision) @ quarkus-core-integration-tests ---
+[INFO] 
+[INFO] --- formatter-maven-plugin:2.26.0:format (format-sources) @ quarkus-core-integration-tests ---
+[INFO] Processed 3 files in 141ms (Formatted: 0, Skipped: 0, Unchanged: 3, Failed: 0, Readonly: 0)
+[INFO] 
+[INFO] --- impsort-maven-plugin:1.12.0:sort (sort-imports) @ quarkus-core-integration-tests ---
+[INFO] Processed 3 files in 00:00.047 (Already Sorted: 3, Needed Sorting: 0)
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ quarkus-core-integration-tests ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.14.1:compile (default-compile) @ quarkus-core-integration-tests ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug deprecation parameters release 21] to target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ quarkus-core-integration-tests ---
+[INFO] skip non existing resourceDirectory /home/andrey-tondo/repo/oidc-suite/core/integration-tests/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.14.1:testCompile (default-testCompile) @ quarkus-core-integration-tests ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug deprecation parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.5.3:test (default-test) @ quarkus-core-integration-tests ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.github.andreytondo.oidc.core.it.CoreResourceTest
+2025-11-27 21:48:26,960 INFO  [io.quarkus] (main) quarkus-core-integration-tests 999-SNAPSHOT on JVM (powered by Quarkus 3.30.1) started in 5.463s. Listening on: http://localhost:8081
+2025-11-27 21:48:26,963 INFO  [io.quarkus] (main) Profile test activated. 
+2025-11-27 21:48:26,963 INFO  [io.quarkus] (main) Installed features: [cdi, core, rest, smallrye-context-propagation, vertx]
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.092 s -- in com.github.andreytondo.oidc.core.it.CoreResourceTest
+2025-11-27 21:48:29,279 INFO  [io.quarkus] (main) quarkus-core-integration-tests stopped in 0.054s
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.4.2:jar (default-jar) @ quarkus-core-integration-tests ---
+[INFO] Building jar: /home/andrey-tondo/repo/oidc-suite/core/integration-tests/target/quarkus-core-integration-tests-999-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-source-plugin:3.3.1:jar-no-fork (attach-sources) @ quarkus-core-integration-tests ---
+[INFO] Building jar: /home/andrey-tondo/repo/oidc-suite/core/integration-tests/target/quarkus-core-integration-tests-999-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- quarkus-maven-plugin:3.30.1:build (default) @ quarkus-core-integration-tests ---
+[INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 3684ms
+[INFO] 
+[INFO] --- maven-failsafe-plugin:3.5.3:integration-test (default) @ quarkus-core-integration-tests ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:3.5.3:verify (default) @ quarkus-core-integration-tests ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ quarkus-core-integration-tests ---
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/integration-tests/target/quarkus-core-integration-tests-999-SNAPSHOT.jar to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core-integration-tests/999-SNAPSHOT/quarkus-core-integration-tests-999-SNAPSHOT.jar
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/integration-tests/pom.xml to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core-integration-tests/999-SNAPSHOT/quarkus-core-integration-tests-999-SNAPSHOT.pom
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/core/integration-tests/target/quarkus-core-integration-tests-999-SNAPSHOT-sources.jar to /home/andrey-tondo/.m2/repository/io/quarkiverse/core/quarkus-core-integration-tests/999-SNAPSHOT/quarkus-core-integration-tests-999-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] ------------< io.quarkiverse.google:quarkus-google-parent >-------------
+[INFO] Building Quarkus Google Identity - Parent 999-SNAPSHOT            [8/19]
+[INFO]   from google/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.4.1:clean (default-clean) @ quarkus-google-parent ---
+[INFO] Deleting /home/andrey-tondo/repo/oidc-suite/google/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-java-version) @ quarkus-google-parent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.BannedRepositories passed
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-maven-version) @ quarkus-google-parent ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:3.2.1:create (get-scm-revision) @ quarkus-google-parent ---
+[INFO] 
+[INFO] --- formatter-maven-plugin:2.26.0:format (format-sources) @ quarkus-google-parent ---
+[INFO] 
+[INFO] --- impsort-maven-plugin:1.12.0:sort (sort-imports) @ quarkus-google-parent ---
+[INFO] Processed 0 files in 00:00.000 (Already Sorted: 0, Needed Sorting: 0)
+[INFO] 
+[INFO] --- maven-source-plugin:3.3.1:jar-no-fork (attach-sources) @ quarkus-google-parent ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ quarkus-google-parent ---
+[INFO] Installing /home/andrey-tondo/repo/oidc-suite/google/pom.xml to /home/andrey-tondo/.m2/repository/io/quarkiverse/google/quarkus-google-parent/999-SNAPSHOT/quarkus-google-parent-999-SNAPSHOT.pom
+[INFO] 
+[INFO] ----------------< io.quarkiverse.google:quarkus-google >----------------
+[INFO] Building Quarkus Google Identity - Runtime 999-SNAPSHOT           [9/19]
+[INFO]   from google/runtime/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.4.1:clean (default-clean) @ quarkus-google ---
+[INFO] Deleting /home/andrey-tondo/repo/oidc-suite/google/runtime/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-java-version) @ quarkus-google ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.BannedRepositories passed
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.5.0:enforce (enforce-maven-version) @ quarkus-google ---
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:3.2.1:create (get-scm-revision) @ quarkus-google ---
+[INFO] 
+[INFO] --- formatter-maven-plugin:2.26.0:format (format-sources) @ quarkus-google ---
+[INFO] 
+[INFO] --- impsort-maven-plugin:1.12.0:sort (sort-imports) @ quarkus-google ---
+[INFO] Processed 0 files in 00:00.000 (Already Sorted: 0, Needed Sorting: 0)
+[INFO] 
+[INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ quarkus-google ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.14.1:compile (default-compile) @ quarkus-google ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] 
+[INFO] --- quarkus-extension-maven-plugin:3.30.1:extension-descriptor (default) @ quarkus-google ---
+[ERROR] Quarkus Extension Dependency Verification Error
+[ERROR] Deployment artifact io.quarkiverse.google:quarkus-google-deployment::jar:999-SNAPSHOT was found to be missing dependencies on the Quarkus extension artifacts marked with '-' below:
+[ERROR] +     io.quarkiverse.google:quarkus-google::jar
+[ERROR] +     io.quarkus:quarkus-arc-deployment::jar
+[ERROR] +         io.quarkus:quarkus-core-deployment::jar
+[ERROR] -     io.quarkiverse.core:quarkus-core-deployment::jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for oidc-suite 999-SNAPSHOT:
+[INFO] 
+[INFO] oidc-suite ......................................... SUCCESS [  1.980 s]
+[INFO] Quarkus OIDC Suite - BOM ........................... SUCCESS [  0.050 s]
+[INFO] Quarkus OIDC Core - Parent ......................... SUCCESS [  0.057 s]
+[INFO] Quarkus OIDC Core - Runtime ........................ SUCCESS [  2.249 s]
+[INFO] Quarkus OIDC Core - Deployment ..................... SUCCESS [ 17.505 s]
+[INFO] Quarkus OIDC Core - Documentation .................. SUCCESS [ 13.071 s]
+[INFO] Quarkus OIDC Core - Integration Tests .............. SUCCESS [ 20.766 s]
+[INFO] Quarkus Google Identity - Parent ................... SUCCESS [  0.045 s]
+[INFO] Quarkus Google Identity - Runtime .................. FAILURE [  0.175 s]
+[INFO] Quarkus Google Identity - Deployment ............... SKIPPED
+[INFO] Quarkus Google Identity - Documentation ............ SKIPPED
+[INFO] Quarkus Google Identity - Integration Tests ........ SKIPPED
+[INFO] Quarkus GovBR Identity - Parent .................... SKIPPED
+[INFO] Quarkus GovBR Identity - Runtime ................... SKIPPED
+[INFO] Quarkus GovBR Identity - Deployment ................ SKIPPED
+[INFO] Quarkus GovBR Identity - Documentation ............. SKIPPED
+[INFO] Quarkus GovBR Identity - Integration Tests ......... SKIPPED
+[INFO] oidc-api ........................................... SKIPPED
+[INFO] oidc-mock .......................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  58.438 s
+[INFO] Finished at: 2025-11-27T21:48:34-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal io.quarkus:quarkus-extension-maven-plugin:3.30.1:extension-descriptor (default) on project quarkus-google: Deployment artifact io.quarkiverse.google:quarkus-google-deployment::jar:999-SNAPSHOT is missing the following dependencies from its configuration: io.quarkiverse.core:quarkus-core-deployment::jar -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :quarkus-google

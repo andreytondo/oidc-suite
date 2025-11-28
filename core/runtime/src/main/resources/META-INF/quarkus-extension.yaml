@@ -1,0 +1,9 @@
+name: OIDC Core
+#description: Base OIDC logic (authorize, token, JWK, redirect helpers)
+metadata:
+#  keywords:
+#    - core
+#  guide: https://docs.quarkiverse.io/core/dev/ # To create and publish this guide, see https://github.com/quarkiverse/quarkiverse/wiki#documenting-your-extension
+#  categories:
+#    - "miscellaneous"
+#  status: "preview"

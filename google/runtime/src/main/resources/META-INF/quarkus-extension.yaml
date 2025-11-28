@@ -1,0 +1,9 @@
+name: Google Identity
+#description: Google provider on top of OIDC Core
+metadata:
+#  keywords:
+#    - google
+#  guide: https://docs.quarkiverse.io/google/dev/ # To create and publish this guide, see https://github.com/quarkiverse/quarkiverse/wiki#documenting-your-extension
+#  categories:
+#    - "miscellaneous"
+#  status: "preview"

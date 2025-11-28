@@ -1,0 +1,5 @@
+name: quarkus-govbr
+title: GovBR Identity
+version: dev
+nav:
+  - modules/ROOT/nav.adoc
